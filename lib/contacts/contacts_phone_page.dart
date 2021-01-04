@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:fluttercontactpicker/fluttercontactpicker.dart';
+import 'package:flutter/services.dart';
 
 class ContactsPhonePage extends StatefulWidget {
   @override
@@ -13,9 +13,33 @@ class ContactsPhonePageState extends State<ContactsPhonePage> {
 
   List dataList;
 
+  static const platform = const MethodChannel('samples.flutter.io/getContacts');
+  Map datMap = {
+    'msg':'无数据',
+    'data':[]
+  };
+
   Future<void> _getContactsPhone() async{
-    // final FullContact contact = (await FlutterContactPicker.pickFullContact());
-    // print(contact);
+    Map resultData;
+    try{
+      resultData = await platform.invokeMethod('getPhoneContacts');
+    } on PlatformException catch(e) {
+      resultData = {
+        'msg':'${e.message}',
+        'data':[]
+      };
+    }
+    setState(() {
+      datMap = resultData;
+    });
+    // String batteryLevel;
+    // try {
+    //   final int result = await platform.invokeMethod('getBatteryLevel');
+    //   batteryLevel = 'Battery level at $result % .';
+    // } on PlatformException catch (e) {
+    //   batteryLevel = "Failed to get battery level: '${e.message}'.";
+    // }
+    // print(batteryLevel);
   }
 
   @override

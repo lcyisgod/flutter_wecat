@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_weicat/common/res/colors.dart';
+import 'package:flutter_wecat/common/res/colors.dart';
 
 class TextStyles {
   static const TextStyle textMain30Body = TextStyle(

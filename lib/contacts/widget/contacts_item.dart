@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_weicat/common/res/resources.dart';
-import 'package:flutter_weicat/login/view/discover_url_iten.dart';
-import 'package:flutter_weicat/login/view/disover_item.dart';
+import 'package:flutter_wecat/common/res/resources.dart';
+import 'package:flutter_wecat/login/view/discover_url_iten.dart';
+import 'package:flutter_wecat/login/view/disover_item.dart';
+import 'package:flutter_wecat/contacts/models/contacts_person_model.dart';
 
 class ContactsItem extends StatefulWidget {
   final Map dataMpa;
@@ -30,7 +31,7 @@ class ContactsItemState extends State<ContactsItem> {
   void initState() {
     // TODO: implement initState
     super.initState();
-    if (widget.dataMpa['name'].toString().isEmpty) {
+    if (widget.dataMpa['title'].toString().isEmpty) {
       haveHeader = false;
     }else {
       haveHeader = true;
@@ -61,25 +62,27 @@ class ContactsItemState extends State<ContactsItem> {
           ),
         );
       }else {
-        Map map = dataList[index-1];
+        ContactsPersonModel contactsPersonModel = dataList[index-1] as ContactsPersonModel;
         return InkWell(
           onTap: (){
-            widget.onPressed(1,{'userId':map['userId']});
+            widget.onPressed(1,{'userId':contactsPersonModel.userId});
           },
           child: DisoverUrlItem(
-            dataMap: map,
+            imageUrl: contactsPersonModel.image??'',
+            title: contactsPersonModel.name??'',
             hideArrow: true,
           ),
         );
       }
     }else {
-      Map map = dataList[index];
+      ContactsPersonModel contactsPersonModel = dataList[index] as ContactsPersonModel;
       return InkWell(
         onTap: (){
-          widget.onPressed(0,{'title':map['name']});
+          widget.onPressed(0,{'title':contactsPersonModel.name});
         },
         child: DisoverItem(
-            dataMap: map,
+            imageUrl: contactsPersonModel.image??'',
+            title: contactsPersonModel.name??'',
             hideArrow: true
         ),
       );

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_weicat/common/res/resources.dart';
-import 'package:flutter_weicat/discover/models/social_circel_model.dart';
-import 'package:flutter_weicat/discover/widget/social_circle_item.dart';
+import 'package:flutter_wecat/common/res/resources.dart';
+import 'package:flutter_wecat/discover/models/social_circel_model.dart';
+import 'package:flutter_wecat/discover/widget/social_circle_item.dart';
 
 class SocialCircleView extends StatefulWidget {
   final List<SocialCircleModel> dataList;

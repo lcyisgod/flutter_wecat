@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_weicat/contacts/contacts_add_friend_page.dart';
-import 'package:flutter_weicat/contacts/view/contacts_friend_view.dart';
+import 'package:flutter_wecat/contacts/contacts_add_friend_page.dart';
+import 'package:flutter_wecat/contacts/view/contacts_friend_view.dart';
 
 import 'contacts_phone_page.dart';
 

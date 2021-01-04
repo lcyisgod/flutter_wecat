@@ -1,4 +1,4 @@
-# flutter_weicat
+# flutter_wecat
 
 A new Flutter application.
 

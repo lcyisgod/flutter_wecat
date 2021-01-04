@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_weicat/common/res/resources.dart';
-import 'package:flutter_weicat/contacts/widget/contacts_item.dart';
+import 'package:flutter_wecat/common/res/resources.dart';
+import 'package:flutter_wecat/contacts/widget/contacts_item.dart';
 import 'package:oktoast/oktoast.dart';
 
 class ContactsView extends StatefulWidget {
@@ -64,7 +64,7 @@ class ContactsViewState extends State<ContactsView> {
         List friendList = dataMap['data'] as List;
         maxHeight = maxHeight + friendList.length * 55;
         Map headerInfoMap = {
-          'title':dataMap['name'],
+          'title':dataMap['title'],
           'minHeight':minHeight,
           'maxHeight':maxHeight
         };

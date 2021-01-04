@@ -1,4 +1,4 @@
-package xdservice.dessmann.com.flutter_weicat
+package xdservice.dessmann.com.flutter_wecat
 
 import io.flutter.embedding.android.FlutterActivity
 

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_weicat/common/res/resources.dart';
+import 'package:flutter_wecat/common/res/resources.dart';
 
 class PersonInfoItem extends StatelessWidget {
   final String iconStr;

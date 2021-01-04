@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
-import 'package:flutter_weicat/common/widget/blanktoolbar/blank_tool_bar_tool.dart';
-import 'package:flutter_weicat/login/view/login_view.dart';
-import 'package:flutter_weicat/main_page.dart';
+import 'package:flutter_wecat/common/widget/blanktoolbar/blank_tool_bar_tool.dart';
+import 'package:flutter_wecat/login/view/login_view.dart';
+import 'package:flutter_wecat/main_page.dart';
 import 'package:oktoast/oktoast.dart';
 
 import 'common/res/resources.dart';

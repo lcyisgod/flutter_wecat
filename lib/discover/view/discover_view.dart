@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_weicat/common/res/resources.dart';
-import 'package:flutter_weicat/common/widget/distance_widget.dart';
-import 'package:flutter_weicat/login/view/disover_item.dart';
+import 'package:flutter_wecat/common/res/resources.dart';
+import 'package:flutter_wecat/common/widget/distance_widget.dart';
+import 'package:flutter_wecat/login/view/disover_item.dart';
 
 class DiscoverView extends StatefulWidget {
   final Function(int type,Map<String,dynamic> map) onPressed;
@@ -80,7 +80,8 @@ class DiscoverViewState extends State<DiscoverView> {
                 widget.onPressed(0,{'title':dataMap['title']});
               },
               child: DisoverItem(
-                dataMap: dataMap,
+                imageUrl: dataMap['image'].toString()??'',
+                title: dataMap['title'].toString()??'',
                 hideArrow: false,
               ),
             );

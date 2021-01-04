@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_weicat/common/res/resources.dart';
-import 'package:flutter_weicat/discover/social_circle_page.dart';
-import 'package:flutter_weicat/discover/view/discover_view.dart';
+import 'package:flutter_wecat/common/res/resources.dart';
+import 'package:flutter_wecat/discover/social_circle_page.dart';
+import 'package:flutter_wecat/discover/view/discover_view.dart';
 
 class DiscoverPage extends StatefulWidget {
   @override

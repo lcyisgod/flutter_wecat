@@ -1,8 +1,8 @@
 import 'package:flutter/cupertino.dart';
-import 'package:flutter_weicat/common/res/resources.dart';
-import 'package:flutter_weicat/common/widget/distance_widget.dart';
-import 'package:flutter_weicat/login/view/disover_item.dart';
-import 'package:flutter_weicat/me/view/person_info_item.dart';
+import 'package:flutter_wecat/common/res/resources.dart';
+import 'package:flutter_wecat/common/widget/distance_widget.dart';
+import 'package:flutter_wecat/login/view/disover_item.dart';
+import 'package:flutter_wecat/me/view/person_info_item.dart';
 
 class MeView extends StatefulWidget {
   @override
@@ -63,7 +63,8 @@ class MeViewState extends State<MeView> {
           Map dataMap = dataList[index-1];
           if (dataMap.isNotEmpty) {
             return DisoverItem(
-              dataMap: dataMap,
+              imageUrl: dataMap['image'].toString()??'',
+              title: dataMap['title'].toString()??'',
               hideArrow: false,
             );
           }else {

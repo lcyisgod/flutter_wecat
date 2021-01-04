@@ -1,7 +1,7 @@
 
 import 'package:flutter/material.dart';
-import 'package:flutter_weicat/common/res/resources.dart';
-import 'package:flutter_weicat/common/widget/distance_widget.dart';
+import 'package:flutter_wecat/common/res/resources.dart';
+import 'package:flutter_wecat/common/widget/distance_widget.dart';
 
 class LoginView extends StatefulWidget {
   final Function(int type,Map<String,dynamic> map) onPressed;

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_weicat/common/res/resources.dart';
-import 'package:flutter_weicat/login/view/disover_item.dart';
+import 'package:flutter_wecat/common/res/resources.dart';
+import 'package:flutter_wecat/login/view/disover_item.dart';
 
 class ContactsFriendView extends StatefulWidget {
 
@@ -31,7 +31,7 @@ class ContactsFriendViewState extends State<ContactsFriendView> {
         itemCount: widget.dataList.length+2,
         itemBuilder: (BuildContext context,int index) {
           print(index);
-          if (index == 1) {
+          if (index == 0) {
             return Container(
               alignment: Alignment(-1,0),
               height: 40,
@@ -49,10 +49,8 @@ class ContactsFriendViewState extends State<ContactsFriendView> {
                 widget.onPressed(1,null);
               },
               child: DisoverItem(
-                dataMap: {
-                  'title':'添加手机联系人',
-                  'image':'assets/images/ic_new_friend.png'
-                },
+                title: '添加手机联系人',
+                imageUrl: 'assets/images/ic_new_friend.png',
                 hideArrow: false,
               ),
             );

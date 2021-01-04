@@ -1,13 +1,14 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_weicat/common/res/resources.dart';
-import 'package:flutter_weicat/common/widget/distance_widget.dart';
+import 'package:flutter_wecat/common/res/resources.dart';
+import 'package:flutter_wecat/common/widget/distance_widget.dart';
 
 class DisoverUrlItem extends StatelessWidget {
-  final Map dataMap;
+  final String imageUrl;
+  final String title;
   final bool hideArrow;
 
-  const DisoverUrlItem({Key key, this.dataMap,this.hideArrow}) : super(key: key);
+  const DisoverUrlItem({Key key, this.imageUrl,this.title,this.hideArrow}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -28,7 +29,7 @@ class DisoverUrlItem extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Image.network(
-                  dataMap['image'].toString(),
+                  imageUrl,
                   width: 30,
                   height: 30,
                 ),
@@ -39,7 +40,7 @@ class DisoverUrlItem extends StatelessWidget {
                       ),
                       alignment: Alignment(-1,0),
                       child: Text(
-                          dataMap['title'].toString()
+                          title
                       ),
                     )
                 ),

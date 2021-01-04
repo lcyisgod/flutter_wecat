@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_weicat/common/res/resources.dart';
-import 'package:flutter_weicat/me/view/me_view.dart';
+import 'package:flutter_wecat/common/res/resources.dart';
+import 'package:flutter_wecat/me/view/me_view.dart';
 
 class MePage extends StatefulWidget {
   @override
