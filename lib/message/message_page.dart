@@ -18,6 +18,11 @@ class MessagePageState extends State<MessagePage> {
        title: Text(
          '微信'
        ),
+       actions: [
+         IconButton(
+             onPressed: (){},
+             icon: Icon(Icons.add))
+       ],
      ),
      body: SafeArea(
        child: Center(

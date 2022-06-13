@@ -184,7 +184,7 @@ class ContactsViewState extends State<ContactsView> {
                 ),
                 alignment: Alignment(-1,0),
                 child: Text(
-                    _headerTitle
+                    _headerTitle == null?'':_headerTitle
                 ),
               ),
             )

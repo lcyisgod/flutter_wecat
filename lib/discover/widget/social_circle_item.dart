@@ -37,11 +37,12 @@ class SocialCircleItemState extends State<SocialCircleItem> {
         } else if (dataList.length <= 6) {
           listHeight = 200.0;
         } else {
-          listHeight = 300.0;
+          listHeight = 350.0;
         }
         return Container(
           margin: EdgeInsets.only(
               top: 5,
+              bottom: 5
           ),
           height: listHeight,
           child: GridView.builder(

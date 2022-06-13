@@ -30,13 +30,15 @@ dependencies:
   cupertino_icons: ^1.0.0
 
   # 显示网络等待插件 https://pub.flutter-io.cn/packages/flutter_easyloading
-  flutter_easyloading: ^2.0.0
+  flutter_easyloading: ^3.0.0
 
   # Toast插件 https://pub.flutter-io.cn/packages/oktoast
-  oktoast: ^2.3.2
+  oktoast: ^3.0.0
 
   # 获取通讯录 https://pub.flutter-io.cn/packages/fluttercontactpicker
-  fluttercontactpicker: ^3.1.0
+  fluttercontactpicker: ^4.5.1
+
+  flutter_contact: ^0.8.1+2
 
 dev_dependencies:
   flutter_test:
