@@ -60,7 +60,7 @@ class ContactsPageState extends State<ContactsPage> {
           ContactsPersonModel(
               name:'蓓蓓',
               userId: '100001',
-              image:'https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=3215504584,2616830327&fm=26&gp=0.jpg'
+              image:'https://t7.baidu.com/it/u=1951548898,3927145&fm=193&f=GIF'
           )
         ],
       },
@@ -70,22 +70,22 @@ class ContactsPageState extends State<ContactsPage> {
           ContactsPersonModel(
               name:'曹公公',
               userId: '100002',
-              image:'https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=3215504584,2616830327&fm=26&gp=0.jpg'
+              image:'https://t7.baidu.com/it/u=1951548898,3927145&fm=193&f=GIF'
           ),
           ContactsPersonModel(
               name:'曹正淳',
               userId: '1000010',
-              image:'https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=3215504584,2616830327&fm=26&gp=0.jpg'
+              image:'https://t7.baidu.com/it/u=1951548898,3927145&fm=193&f=GIF'
           ),
           ContactsPersonModel(
               name:'曹雪芹',
               userId: '100005',
-              image:'https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=3215504584,2616830327&fm=26&gp=0.jpg'
+              image:'https://t7.baidu.com/it/u=1951548898,3927145&fm=193&f=GIF'
           ),
           ContactsPersonModel(
               name:'曹格',
               userId: '100006',
-              image:'https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=3215504584,2616830327&fm=26&gp=0.jpg'
+              image:'https://t7.baidu.com/it/u=1951548898,3927145&fm=193&f=GIF'
           ),
         ],
       },
@@ -95,7 +95,7 @@ class ContactsPageState extends State<ContactsPage> {
           ContactsPersonModel(
               name:'嫣然',
               userId: '100009',
-              image:'https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=3215504584,2616830327&fm=26&gp=0.jpg'
+              image:'https://t7.baidu.com/it/u=1951548898,3927145&fm=193&f=GIF'
           )
         ],
       },
@@ -105,22 +105,22 @@ class ContactsPageState extends State<ContactsPage> {
           ContactsPersonModel(
               name:'郑大佬',
               userId: '100003',
-              image:'https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=3215504584,2616830327&fm=26&gp=0.jpg'
+              image:'https://t7.baidu.com/it/u=1951548898,3927145&fm=193&f=GIF'
           ),
           ContactsPersonModel(
               name:'郑成功',
               userId: '100006',
-              image:'https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=3215504584,2616830327&fm=26&gp=0.jpg'
+              image:'https://t7.baidu.com/it/u=1951548898,3927145&fm=193&f=GIF'
           ),
           ContactsPersonModel(
               name:'郑和',
               userId: '100007',
-              image:'https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=3215504584,2616830327&fm=26&gp=0.jpg'
+              image:'https://t7.baidu.com/it/u=1951548898,3927145&fm=193&f=GIF'
           ),
           ContactsPersonModel(
               name:'郑则仕',
               userId: '100008',
-              image:'https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=3215504584,2616830327&fm=26&gp=0.jpg'
+              image:'https://t7.baidu.com/it/u=1951548898,3927145&fm=193&f=GIF'
           ),
         ],
       },

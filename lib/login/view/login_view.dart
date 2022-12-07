@@ -103,7 +103,6 @@ class LoginViewState extends State<LoginView> {
                   Expanded(
                     child: Container(
                       alignment: Alignment(0,1),
-                      height: double.infinity,
                       child: TextField(
                         controller: controllerList[1],
                         style: TextStyles.textMain18Body,

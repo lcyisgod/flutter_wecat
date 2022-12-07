@@ -15,12 +15,7 @@ class ContactsPersonDetailPageState extends State<ContactsPersonDetailPage> {
     return Scaffold(
       appBar: AppBar(
         actions: [
-          FlatButton(
-              onPressed: (){
 
-              },
-              child: Text('...')
-          )
         ],
       ),
       body: SafeArea(
