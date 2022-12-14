@@ -177,7 +177,7 @@ class ContactsPageState extends State<ContactsPage> {
       ),
       body: SafeArea(
         child: Center(
-          child:  ContactsView(
+          child: ContactsView(
             dataList: dataList,
             searchDataList: searchDataList,
             onPressed: (int type,dynamic data) {

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:fluttercontactpicker/fluttercontactpicker.dart';
+import 'package:flutter_contacts/flutter_contacts.dart';
+import 'package:flutter_wecat/common/widget/distance_widget.dart';
 
 class ContactsPhonePage extends StatefulWidget {
   @override
@@ -16,24 +17,20 @@ class ContactsPhonePageState extends State<ContactsPhonePage> {
 
   static const platform = const MethodChannel('samples.flutter.io/getContacts');
   Map datMap = {
-    'msg':'无数据',
     'data':[]
   };
 
   Future<void> _getContactsPhone() async{
-    Map resultData;
-    // Stream<Contact> contacts = await Contacts.streamContacts();
-    // try{
-    //   resultData = await platform.invokeMethod('getPhoneContacts');
-    // } on PlatformException catch(e) {
-    //   resultData = {
-    //     'msg':'${e.message}',
-    //     'data':[]
-    //   };
-    // }
-    setState(() {
-      datMap = resultData;
-    });
+    if(await FlutterContacts.requestPermission()) {
+      List<Contact> contacts = await FlutterContacts.getContacts(
+          withProperties: true, withPhoto: true);
+      if(contacts.isEmpty) {
+        return;
+      }
+      setState(() {
+        dataList = contacts;
+      });
+    }
   }
 
   @override
@@ -57,14 +54,31 @@ class ContactsPhonePageState extends State<ContactsPhonePage> {
       body: SafeArea(
         child: Center(
           child: ListView.builder(
-            itemCount: dataList.length+1,
+            itemCount: dataList.length,
               itemBuilder: (BuildContext context,int index){
-              if (index == 0) {
+              final Contact contact = dataList[index];
                 return Container(
-
+                  child: Column(
+                    children: [
+                      Container(
+                        height: 20,
+                        child: Text(
+                            contact.displayName
+                        ),
+                      ),
+                      Container(
+                        height: 20,
+                        child: Text(
+                            '${contact.phones.isNotEmpty ? contact.phones.first.number : '(none)'}'
+                        ),
+                      ),
+                      DistanceWidget(
+                        height: 1,
+                        color: Colors.deepOrange,
+                      )
+                    ],
+                  ),
                 );
-              }
-              return Container();
               }),
         ),
       ),

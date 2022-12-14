@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_wecat/contacts/view/contacts_add_friend_view.dart';
 
 class ContactsAddFriendPage extends StatefulWidget {
   @override
@@ -21,7 +22,9 @@ class ContactAddFriendPageState extends State<ContactsAddFriendPage> {
       ),
       body: SafeArea(
         child: Center(
-          child: Container(),
+          child: ContactsAddFriendView(
+
+          ),
         ),
       ),
     );

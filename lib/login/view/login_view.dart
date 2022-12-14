@@ -1,11 +1,9 @@
-
 import 'package:flutter/material.dart';
 import 'package:flutter_wecat/common/res/resources.dart';
 import 'package:flutter_wecat/common/widget/distance_widget.dart';
 
 class LoginView extends StatefulWidget {
   final Function(int type,Map<String,dynamic> map) onPressed;
-
   const LoginView({Key key, this.onPressed}) : super(key: key);
 
   @override

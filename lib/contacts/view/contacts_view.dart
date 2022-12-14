@@ -71,6 +71,8 @@ class ContactsViewState extends State<ContactsView> {
         dataHeaderInfo.add(headerInfoMap);
       }
     }
+
+    ///添加滑动观察事件
     _controller.addListener(() {
       double offset = _controller.offset - 330;
       if (offset >= 0.0) {
@@ -96,7 +98,7 @@ class ContactsViewState extends State<ContactsView> {
         return;
       }
 
-      //遍历header数组获取当前显示的header内容
+      ///遍历header数组获取当前显示的header内容
       for (int i =0; i < dataHeaderInfo.length;  i++) {
         Map headInfoMap = dataHeaderInfo[i];
         if (headInfoMap['minHeight'] <= offset && headInfoMap['maxHeight'] >=offset) {
@@ -109,7 +111,6 @@ class ContactsViewState extends State<ContactsView> {
           break;
         }
       }
-
     });
   }
 

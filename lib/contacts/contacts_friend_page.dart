@@ -14,7 +14,6 @@ class ContactsFriendPage extends StatefulWidget {
 
 
 class ContactsFriendPageState extends State<ContactsFriendPage> {
-
   /*
   * 0:添加朋友
   * 1:查看通讯录*/

@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_wecat/common/res/resources.dart';
 import 'package:flutter_wecat/common/widget/distance_widget.dart';

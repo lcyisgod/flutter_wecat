@@ -1,27 +1,21 @@
 PODS:
   - Flutter (1.0.0)
-  - flutter_contact (0.0.1):
-    - Flutter
-  - fluttercontactpicker (4.6.0):
+  - flutter_contacts (0.0.1):
     - Flutter
 
 DEPENDENCIES:
   - Flutter (from `Flutter`)
-  - flutter_contact (from `.symlinks/plugins/flutter_contact/ios`)
-  - fluttercontactpicker (from `.symlinks/plugins/fluttercontactpicker/ios`)
+  - flutter_contacts (from `.symlinks/plugins/flutter_contacts/ios`)
 
 EXTERNAL SOURCES:
   Flutter:
     :path: Flutter
-  flutter_contact:
-    :path: ".symlinks/plugins/flutter_contact/ios"
-  fluttercontactpicker:
-    :path: ".symlinks/plugins/fluttercontactpicker/ios"
+  flutter_contacts:
+    :path: ".symlinks/plugins/flutter_contacts/ios"
 
 SPEC CHECKSUMS:
   Flutter: f04841e97a9d0b0a8025694d0796dd46242b2854
-  flutter_contact: de1260a343986ae87ef21dcda46f4ae584eceb8c
-  fluttercontactpicker: d582836dea6b5d489f3d259f35d7817ae82ee5e6
+  flutter_contacts: edb1c5ce76aa433e20e6cb14c615f4c0b66e0983
 
 PODFILE CHECKSUM: ef19549a9bc3046e7bb7d2fab4d021637c0c58a3
 
