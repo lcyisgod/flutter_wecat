@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_wecat/contacts/view/contacts_add_firend_item.dart';
 
 import '../../common/res/colors.dart';
 import '../../common/res/styles.dart';
@@ -12,6 +13,45 @@ class ContactsAddFriendView extends StatefulWidget {
 }
 
 class ContactsAddFriendViewState extends State<ContactsAddFriendView> {
+  List<Map> dataItem;
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    dataItem = [
+      {
+        "imageUrl":"https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fi1.hdslb.com%2Fbfs%2Farchive%2F9f7069ccbb537742fa8946d4dd3b9624fd9025df.jpg&refer=http%3A%2F%2Fi1.hdslb.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1672973706&t=d20919bee00b32dc72f6a5b4047698bf",
+        "title":"雷达加朋友",
+        "detailTitle":"添加身边的朋友"
+      },
+      {
+        "imageUrl":"https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fi1.hdslb.com%2Fbfs%2Farchive%2F9f7069ccbb537742fa8946d4dd3b9624fd9025df.jpg&refer=http%3A%2F%2Fi1.hdslb.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1672973706&t=d20919bee00b32dc72f6a5b4047698bf",
+        "title":"面对面建群",
+        "detailTitle":"与身边的朋友进入同一个群聊"
+      },
+      {
+        "imageUrl":"https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fi1.hdslb.com%2Fbfs%2Farchive%2F9f7069ccbb537742fa8946d4dd3b9624fd9025df.jpg&refer=http%3A%2F%2Fi1.hdslb.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1672973706&t=d20919bee00b32dc72f6a5b4047698bf",
+        "title":"扫一扫",
+        "detailTitle":"扫描二维码名片"
+      },
+      {
+        "imageUrl":"https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fi1.hdslb.com%2Fbfs%2Farchive%2F9f7069ccbb537742fa8946d4dd3b9624fd9025df.jpg&refer=http%3A%2F%2Fi1.hdslb.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1672973706&t=d20919bee00b32dc72f6a5b4047698bf",
+        "title":"手机联系人",
+        "detailTitle":"添加通讯录中的朋友"
+      },
+      {
+        "imageUrl":"https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fi1.hdslb.com%2Fbfs%2Farchive%2F9f7069ccbb537742fa8946d4dd3b9624fd9025df.jpg&refer=http%3A%2F%2Fi1.hdslb.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1672973706&t=d20919bee00b32dc72f6a5b4047698bf",
+        "title":"公众号",
+        "detailTitle":"获取更多资讯和服务"
+      },
+      {
+        "imageUrl":"https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fi1.hdslb.com%2Fbfs%2Farchive%2F9f7069ccbb537742fa8946d4dd3b9624fd9025df.jpg&refer=http%3A%2F%2Fi1.hdslb.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1672973706&t=d20919bee00b32dc72f6a5b4047698bf",
+        "title":"企业微信联系人",
+        "detailTitle":"通过手机号搜索企业微信用户"
+      }
+    ];
+  }
+
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
@@ -84,7 +124,12 @@ class ContactsAddFriendViewState extends State<ContactsAddFriendView> {
                 ),
               );
             }
-            return Container();
+            Map dataMap = dataItem[index-1];
+            return ContactsAddFriendItem(
+              imageUrl: dataMap["imageUrl"],
+              title: dataMap["title"],
+              detailTitle: dataMap["detailTitle"],
+            );
           }),
     );
   }
