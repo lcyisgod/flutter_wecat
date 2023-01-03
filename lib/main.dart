@@ -32,6 +32,9 @@ class MyAppState extends State<MyApp> {
             theme: ThemeData(
               primaryColor:Colours.bg_color,
               scaffoldBackgroundColor: Colors.white,
+              appBarTheme: AppBarTheme(
+
+              )
             ),
             home: MyHomePage(),
           ),
@@ -76,8 +79,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   Map dataMap = data as Map;
                   String phone = dataMap['phone'] as String;
                   if (phone.isNotEmpty) {
-                    Navigator.pushAndRemoveUntil(context, MaterialPageRoute(builder: (BuildContext context){return MainPage();}), (route) => false
-                    );
+                    Navigator.pushAndRemoveUntil(context, MaterialPageRoute(builder: (BuildContext context){return MainPage();}), (route) => false);
                   }
                 }
               },

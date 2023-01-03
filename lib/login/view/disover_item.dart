@@ -44,7 +44,7 @@ class DisoverItem extends StatelessWidget {
                       ),
                     )
                 ),
-               Offstage(
+                Offstage(
                  offstage: hideArrow,
                  child: Icon(
                    Icons.chevron_right_rounded,

@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_wecat/message/message_detail_page.dart';
+import 'package:flutter_wecat/message/view/message_view.dart';
 
 class MessagePage extends StatefulWidget {
   @override
@@ -9,6 +11,17 @@ class MessagePage extends StatefulWidget {
 }
 
 class MessagePageState extends State<MessagePage> {
+
+  Future _clickActionEvent(int type, Map data) async {
+    if(type == 0) {
+      print("搜索消息");
+    } else {
+      Navigator.push(context, MaterialPageRoute(builder: (BuildContext context){
+        return MessageDetailPage();
+      }));
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
@@ -26,29 +39,9 @@ class MessagePageState extends State<MessagePage> {
      ),
      body: SafeArea(
        child: Center(
-         child: InkWell(
-           child: DecoratedBox(
-             decoration: BoxDecoration(
-               gradient: LinearGradient(colors: [Colors.red,Colors.orange.shade700]),
-               borderRadius: BorderRadius.circular(3),
-               boxShadow: [
-                 BoxShadow(
-                   color: Colors.black54,
-                   offset: Offset(2.0, 2.0),
-                   blurRadius: 4.0
-                 )
-               ]
-             ),
-             child: Padding(
-               padding: EdgeInsets.symmetric(horizontal: 80.0,vertical: 18.0),
-               child: Text(
-                   '微信',
-                   style: TextStyle(color: Colors.white)
-               )
-             ),
-           ),
-           onTap: (){
-             print("点击事件");
+         child: MessageView(
+           onPressed: (int type,dynamic data) {
+             _clickActionEvent(type, data);
            },
          ),
        ),

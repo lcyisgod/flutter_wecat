@@ -58,7 +58,7 @@ class ContactsPageState extends State<ContactsPage> {
         'title':'B',
         'data':[
           ContactsPersonModel(
-              name:'蓓蓓',
+              name:'贝壳',
               userId: '100001',
               image:'https://t7.baidu.com/it/u=1951548898,3927145&fm=193&f=GIF'
           )
