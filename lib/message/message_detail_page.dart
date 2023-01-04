@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_wecat/message/view/message_detail_view.dart';
 
 class MessageDetailPage extends StatefulWidget {
   @override
@@ -29,7 +30,7 @@ class MessageDetailPageState extends State<MessageDetailPage> {
       ),
       body: SafeArea(
         child: Center(
-          child: Container(
+          child: MessageDetailView(
 
           ),
         ),

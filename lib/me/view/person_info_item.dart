@@ -55,7 +55,7 @@ class PersonInfoItem extends StatelessWidget {
                        Expanded(
                          flex: 10,
                          child:  Text(
-                           '微信号：',
+                           '微信号：ccy',
                            maxLines: 1,
                            overflow: TextOverflow.ellipsis,
                            style: TextStyles.textMain18Body,

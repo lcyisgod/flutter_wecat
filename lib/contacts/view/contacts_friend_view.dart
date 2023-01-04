@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_wecat/common/res/resources.dart';
-import 'package:flutter_wecat/login/view/disover_item.dart';
+import 'package:flutter_wecat/login/widget/disover_item.dart';
 
 class ContactsFriendView extends StatefulWidget {
 

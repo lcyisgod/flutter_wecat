@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_wecat/common/res/resources.dart';
-import 'package:flutter_wecat/login/view/discover_url_iten.dart';
-import 'package:flutter_wecat/login/view/disover_item.dart';
+import 'package:flutter_wecat/login/widget/discover_url_iten.dart';
+import 'package:flutter_wecat/login/widget/disover_item.dart';
 import 'package:flutter_wecat/contacts/models/contacts_person_model.dart';
 
 class ContactsItem extends StatefulWidget {

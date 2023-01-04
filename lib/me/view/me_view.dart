@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_wecat/common/res/resources.dart';
 import 'package:flutter_wecat/common/widget/distance_widget.dart';
-import 'package:flutter_wecat/login/view/disover_item.dart';
+import 'package:flutter_wecat/login/widget/disover_item.dart';
 import 'package:flutter_wecat/me/view/person_info_item.dart';
 
 class MeView extends StatefulWidget {
@@ -58,7 +58,9 @@ class MeViewState extends State<MeView> {
       itemCount: dataList.length+1,
         itemBuilder: (BuildContext context, int index){
         if (index == 0) {
-          return PersonInfoItem();
+          return PersonInfoItem(
+            weCatName: "ccy",
+          );
         }else {
           Map dataMap = dataList[index-1];
           if (dataMap.isNotEmpty) {

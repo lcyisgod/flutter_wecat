@@ -91,6 +91,7 @@ class LoginViewState extends State<LoginView> {
                       keyboardType: TextInputType.number,
                       decoration: InputDecoration(
                         border: InputBorder.none, //去掉下划线
+                        isCollapsed: true
                       ),
                     ),
                   ),
@@ -100,7 +101,7 @@ class LoginViewState extends State<LoginView> {
                   ),
                   Expanded(
                     child: Container(
-                      alignment: Alignment(0,1),
+                      alignment: Alignment(0,0),
                       child: TextField(
                         controller: controllerList[1],
                         style: TextStyles.textMain18Body,
@@ -120,8 +121,14 @@ class LoginViewState extends State<LoginView> {
                           }
                         },
                         decoration: InputDecoration(
-                            border: InputBorder.none,
-                            hintText: '请填写手机号码'//去掉下划线
+                          border: InputBorder.none,//去掉下划线
+                          hintText: '请填写手机号码',
+                          ///TextField在设置高度后
+                          ///如果布局高度小于它的默认高度
+                          ///那么它的文本在垂直居中上就会有问题
+                          ///使用isCollapsed来取消默认高度使其跟随父空间高度
+                          ///默认高度多少没查到
+                          isCollapsed: true,
                         ),
                       ),
                     ),

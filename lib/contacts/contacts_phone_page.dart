@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_contacts/flutter_contacts.dart';
-import 'package:flutter_wecat/common/widget/distance_widget.dart';
+import 'package:flutter_wecat/contacts/view/contacts_phone_view.dart';
 
 class ContactsPhonePage extends StatefulWidget {
   @override
@@ -14,11 +14,6 @@ class ContactsPhonePage extends StatefulWidget {
 class ContactsPhonePageState extends State<ContactsPhonePage> {
 
   List dataList;
-
-  static const platform = const MethodChannel('samples.flutter.io/getContacts');
-  Map datMap = {
-    'data':[]
-  };
 
   Future<void> _getContactsPhone() async{
     if(await FlutterContacts.requestPermission()) {
@@ -53,33 +48,9 @@ class ContactsPhonePageState extends State<ContactsPhonePage> {
       ),
       body: SafeArea(
         child: Center(
-          child: ListView.builder(
-            itemCount: dataList.length,
-              itemBuilder: (BuildContext context,int index){
-              final Contact contact = dataList[index];
-                return Container(
-                  child: Column(
-                    children: [
-                      Container(
-                        height: 20,
-                        child: Text(
-                            contact.displayName
-                        ),
-                      ),
-                      Container(
-                        height: 20,
-                        child: Text(
-                            '${contact.phones.isNotEmpty ? contact.phones.first.number : '(none)'}'
-                        ),
-                      ),
-                      DistanceWidget(
-                        height: 1,
-                        color: Colors.deepOrange,
-                      )
-                    ],
-                  ),
-                );
-              }),
+          child: ContactsPhoneView(
+            dataList: dataList,
+          ),
         ),
       ),
     );

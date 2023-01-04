@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_wecat/common/res/resources.dart';
 import 'package:flutter_wecat/common/widget/distance_widget.dart';
-import 'package:flutter_wecat/login/view/disover_item.dart';
+import 'package:flutter_wecat/login/widget/disover_item.dart';
 
 class DiscoverView extends StatefulWidget {
   final Function(int type,Map<String,dynamic> map) onPressed;
