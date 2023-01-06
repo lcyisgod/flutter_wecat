@@ -17,29 +17,27 @@ class MessageDetailInfoItem extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.end,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Expanded(
-                child: Container(
-                  margin: EdgeInsets.only(right: 5.0),
-                  child: Container(
-                    constraints: BoxConstraints(
-                        minHeight: 30,
-                    ),
-                    decoration: BoxDecoration(
-                        color: Colors.blue,
-                        borderRadius: BorderRadius.all(Radius.circular(3))
-                    ),
-                    alignment: Alignment.centerRight,
-                    padding: EdgeInsets.only(left: 2.0,right: 2.0),
-                    child: Text(
-                      messageData["message"],
-                      maxLines : 9999,
-                      style: TextStyle(
-                          fontSize: 13,
-                          color: Colors.black
-                      ),
-                    ),
+            Flexible(
+              child: Container(
+                constraints: BoxConstraints(
+                  minHeight: 30,
+                ),
+                decoration: BoxDecoration(
+                    color: Colors.blue,
+                    borderRadius: BorderRadius.all(Radius.circular(3))
+                ),
+                alignment: Alignment.centerRight,
+                margin: EdgeInsets.only(right: 5.0),
+                padding: EdgeInsets.only(left: 2.0,right: 2.0),
+                child: Text(
+                  messageData["message"],
+                  maxLines : 9999,
+                  style: TextStyle(
+                      fontSize: 13.0,
+                      color: Colors.black
                   ),
-                )
+                ),
+              ),
             ),
             ClipRRect(
               borderRadius: BorderRadius.circular(3.0),
@@ -59,7 +57,7 @@ class MessageDetailInfoItem extends StatelessWidget {
             borderRadius: BorderRadius.circular(3.0),
             child: Image.network(messageData["imageUrl"],fit: BoxFit.cover,height: 30, width: 30,),
           ),
-          Expanded(
+          Flexible(
             child: Container(
               alignment: Alignment.centerLeft,
               constraints: BoxConstraints(

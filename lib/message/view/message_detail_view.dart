@@ -90,7 +90,7 @@ class MessageDetailViewState extends State<MessageDetailView> {
                                 "userType" : "1"
                               };
                               dataList.add(dataMap);
-                              controller.text = "";
+                              controller.clear();
                             });
                           },
                         ),
