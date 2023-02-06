@@ -38,6 +38,9 @@ dependencies:
   # 获取通讯录 https://pub.flutter-io.cn/packages/flutter_contacts
   flutter_contacts: ^1.1.5+1
 
+  # 二维码扫描 https://pub.flutter-io.cn/packages/qr_code_scanner
+  qr_code_scanner: ^1.0.1
+
 dev_dependencies:
   flutter_test:
     sdk: flutter

@@ -84,6 +84,7 @@ class LoginViewState extends State<LoginView> {
                     width: 80,
                     alignment: Alignment(0,0),
                     child: TextField(
+                      enabled: false,
                       controller: controllerList[0],
                       style: TextStyles.textMain18Body,
                       textInputAction: TextInputAction.done,
