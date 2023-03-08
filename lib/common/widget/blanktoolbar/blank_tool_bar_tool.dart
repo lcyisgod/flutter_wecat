@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
 import 'too_bar.dart';
-
 /// 用于持有FocusNode的类
 class BlankToolBarModel {
   // 点击空白部分用于响应的FocusNode
@@ -71,8 +70,6 @@ class BlankToolBarModel {
     FocusScope.of(context).requestFocus(blankModel);
   }
 }
-
-/// 增加
 /// 1、自动处理点击空白页面关闭键盘，
 /// 2、键盘上方增加一个toolbar
 class BlankToolBarTool {

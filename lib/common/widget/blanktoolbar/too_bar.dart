@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'dart:math' as math;
 
@@ -26,6 +25,7 @@ class ToolBar extends StatefulWidget {
         tintColor: tintColor);
   }
 }
+
 class ToolBarState extends State<ToolBar>{
   Map <String,ToolBarModel> focusNodeMap;
   VoidCallback doneCallback;

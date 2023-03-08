@@ -1,4 +1,7 @@
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
+import 'package:flutter_wecat/common/network/netWorkerManager.dart';
 import 'package:flutter_wecat/common/res/resources.dart';
 import 'package:flutter_wecat/me/view/me_view.dart';
 
