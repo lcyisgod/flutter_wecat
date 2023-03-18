@@ -35,6 +35,7 @@ class MessageDetailViewState extends State<MessageDetailView> {
   Widget build(BuildContext context) {
     // TODO: implement build
     return Container(
+      color: Colours.bg_color,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.end,
         children: [

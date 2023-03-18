@@ -4,7 +4,6 @@ import 'package:flutter_wecat/message/view/message_detail_view.dart';
 class MessageDetailPage extends StatefulWidget {
   @override
   State<StatefulWidget> createState() {
-    // TODO: implement createState
     return MessageDetailPageState();
   }
 }
@@ -12,7 +11,6 @@ class MessageDetailPage extends StatefulWidget {
 class MessageDetailPageState extends State<MessageDetailPage> {
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,

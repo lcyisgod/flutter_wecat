@@ -23,7 +23,7 @@ class MessageDetailInfoItem extends StatelessWidget {
                   minHeight: 30,
                 ),
                 decoration: BoxDecoration(
-                    color: Colors.blue,
+                    color: Colors.white,
                     borderRadius: BorderRadius.all(Radius.circular(3))
                 ),
                 alignment: Alignment.centerRight,
@@ -64,7 +64,7 @@ class MessageDetailInfoItem extends StatelessWidget {
                   minHeight: 30
               ),
               decoration: BoxDecoration(
-                  color: Colours.bg_color,
+                  color: Colors.white,
                   borderRadius: BorderRadius.all(Radius.circular(3))
               ),
               margin: EdgeInsets.only(left: 5.0),

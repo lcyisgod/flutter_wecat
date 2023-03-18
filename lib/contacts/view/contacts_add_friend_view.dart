@@ -5,6 +5,11 @@ import '../../common/res/colors.dart';
 import '../../common/res/styles.dart';
 
 class ContactsAddFriendView extends StatefulWidget {
+
+  final Function(int type,Map<String,dynamic> map) onPressed;
+
+  const ContactsAddFriendView({Key key, this.onPressed}) : super(key: key);
+
   @override
   State<StatefulWidget> createState() {
     // TODO: implement createState
@@ -125,10 +130,15 @@ class ContactsAddFriendViewState extends State<ContactsAddFriendView> {
               );
             }
             Map dataMap = dataItem[index-1];
-            return ContactsAddFriendItem(
-              imageUrl: dataMap["imageUrl"],
-              title: dataMap["title"],
-              detailTitle: dataMap["detailTitle"],
+            return InkWell(
+              child: ContactsAddFriendItem(
+                imageUrl: dataMap["imageUrl"],
+                title: dataMap["title"],
+                detailTitle: dataMap["detailTitle"],
+              ),
+              onTap: () {
+                widget.onPressed(index-1,null);
+              },
             );
           }),
     );
