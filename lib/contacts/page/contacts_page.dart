@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_wecat/contacts/contacts_friend_page.dart';
+import 'package:flutter_wecat/contacts/page/contacts_friend_page.dart';
 import 'package:flutter_wecat/contacts/models/contacts_person_model.dart';
 import 'package:flutter_wecat/contacts/view/contacts_view.dart';
 
