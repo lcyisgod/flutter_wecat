@@ -6,7 +6,6 @@ import 'package:flutter_wecat/contacts/view/contacts_add_friend_view.dart';
 class ContactsAddFriendPage extends StatefulWidget {
   @override
   State<StatefulWidget> createState() {
-    // TODO: implement createState
     return ContactAddFriendPageState();
   }
 }
@@ -14,7 +13,6 @@ class ContactsAddFriendPage extends StatefulWidget {
 class ContactAddFriendPageState extends State<ContactsAddFriendPage> {
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
@@ -25,7 +23,7 @@ class ContactAddFriendPageState extends State<ContactsAddFriendPage> {
       body: SafeArea(
         child: Center(
           child: ContactsAddFriendView(
-            onPressed: (int type,Map data) {
+            onPressed: (int type,Map? data) {
               this.addEvent(type, data);
             },
           ),
@@ -34,7 +32,7 @@ class ContactAddFriendPageState extends State<ContactsAddFriendPage> {
     );
   }
 
-  void addEvent(int type,Map data) {
+  void addEvent(int type,Map? data) {
     switch (type) {
       case 2:{
         Navigator.of(context).push(MaterialPageRoute(

@@ -16,37 +16,32 @@ void main() {
 class MyApp extends StatefulWidget {
   @override
   State<StatefulWidget> createState() {
-    // TODO: implement createState
     return MyAppState();
   }
 }
 
 class MyAppState extends State<MyApp> {
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      builder: (BuildContext context, Widget child) {
-          return OKToast(
-              child: FlutterEasyLoading(
-                child: MaterialApp(
-                  title: "微信",
-                  home: MyHomePage(),
-                  theme: ThemeData(
-                      primaryColor:Colours.bg_color,
-                      scaffoldBackgroundColor: Colors.white,
-                      appBarTheme: AppBarTheme(
-
-                      )
-                  ),
+      builder: (context,widget) {
+        return OKToast(
+            child: FlutterEasyLoading(
+              child: MaterialApp(
+                title: "微信",
+                home: MyHomePage(),
+                theme: ThemeData(
+                    primaryColor:Colours.bg_color,
+                    scaffoldBackgroundColor: Colors.white,
                 ),
               ),
-              backgroundColor: Colors.black54,
-              textPadding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 10.0),
-              radius: 20.0,
-              position: ToastPosition.bottom
-          );
-        },
+            ),
+            backgroundColor: Colors.black54,
+            textPadding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 10.0),
+            radius: 20.0,
+            position: ToastPosition.bottom
+        );
+      }
     );
   }
 }
@@ -62,7 +57,6 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
     return Scaffold(
       resizeToAvoidBottomInset: false,
       body: BlankToolBarTool.blankToolBarWidget(

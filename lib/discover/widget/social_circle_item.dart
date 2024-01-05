@@ -5,10 +5,9 @@ import 'package:flutter_wecat/discover/models/social_circel_model.dart';
 class SocialCircleItem extends StatefulWidget {
   final SocialCircleModel model;
 
-  const SocialCircleItem({Key key, this.model}) : super(key: key);
+  const SocialCircleItem({Key? key, required this.model}) : super(key: key);
   @override
   State<StatefulWidget> createState() {
-    // TODO: implement createState
     return SocialCircleItemState();
   }
 }
@@ -82,7 +81,6 @@ class SocialCircleItemState extends State<SocialCircleItem> {
 
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
     return Container(
       color: Colors.white,
       child: Column(

@@ -5,14 +5,13 @@ import 'package:flutter_wecat/contacts/view/contacts_phone_view.dart';
 class ContactsPhonePage extends StatefulWidget {
   @override
   State<StatefulWidget> createState() {
-    // TODO: implement createState
     return ContactsPhonePageState();
   }
 }
 
 class ContactsPhonePageState extends State<ContactsPhonePage> {
 
-  List dataList;
+   late List dataList;
 
   Future<void> _getContactsPhone() async{
     if(await FlutterContacts.requestPermission()) {

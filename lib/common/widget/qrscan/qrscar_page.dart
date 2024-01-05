@@ -11,24 +11,21 @@ class QRSCanPage extends StatefulWidget {
 }
 
 class QRSCanPageState extends State<QRSCanPage> {
-  Barcode result;
-  QRViewController controller;
+  QRViewController? controller;
   final GlobalKey qrKey = GlobalKey(debugLabel: 'QR');
 
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
   }
 
   @override
   void reassemble() {
-    // TODO: implement reassemble
     super.reassemble();
     if (Platform.isAndroid) {
-      controller.pauseCamera();
+      controller?.pauseCamera();
     }
-    controller.resumeCamera();
+    controller?.resumeCamera();
   }
 
   @override

@@ -4,20 +4,18 @@ import 'package:flutter_wecat/common/widget/distance_widget.dart';
 import 'package:flutter_wecat/login/widget/disover_item.dart';
 
 class DiscoverView extends StatefulWidget {
-  final Function(int type,Map<String,dynamic> map) onPressed;
+  final Function(int type,Map<String,dynamic> map)? onPressed;
 
-  const DiscoverView({Key key, this.onPressed}) : super(key: key);
+  const DiscoverView({Key? key, this.onPressed}) : super(key: key);
 
   @override
   State<StatefulWidget> createState() {
-    // TODO: implement createState
     return DiscoverViewState();
   }
 }
 
 class DiscoverViewState extends State<DiscoverView> {
-  List dataList = [];
-
+  late List dataList;
   @override
   void initState() {
     // TODO: implement initState
@@ -69,7 +67,6 @@ class DiscoverViewState extends State<DiscoverView> {
 
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
     return ListView.builder(
         itemCount: dataList.length,
         itemBuilder: (BuildContext context,int index){
@@ -77,11 +74,11 @@ class DiscoverViewState extends State<DiscoverView> {
           if (dataMap.isNotEmpty) {
             return InkWell(
               onTap: (){
-                widget.onPressed(0,{'title':dataMap['title']});
+                widget.onPressed?.call(0,{'title':dataMap['title']});
               },
               child: DisoverItem(
-                imageUrl: dataMap['image'].toString()??'',
-                title: dataMap['title'].toString()??'',
+                imageUrl: dataMap['image'].toString(),
+                title: dataMap['title'].toString(),
                 hideArrow: false,
               ),
             );

@@ -1,7 +1,13 @@
 ///朋友圈数据
 class SocialCircleModel {
 
-  SocialCircleModel({this.headerUrl,this.nickName,this.contentStr,this.iconList,this.dateStr});
+  SocialCircleModel({
+    required this.headerUrl,
+    required this.nickName,
+    required this.contentStr,
+    required this.iconList,
+    required this.dateStr
+  });
 
   //头像
   String headerUrl;

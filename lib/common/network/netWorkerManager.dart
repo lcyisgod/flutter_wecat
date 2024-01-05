@@ -9,7 +9,7 @@ class Method {
 }
 
 class DioUtil {
-  static Dio _dio;
+  static Dio? _dio;
   static final DioUtil _instance = DioUtil._init();
 
   ///请求基础信息设置
@@ -36,7 +36,7 @@ class DioUtil {
 
   ///发起Get请求
   Future<void> get(String path,
-      {Map<String, dynamic> pathParams, dynamic data, Function successCallBack, Function errorCallBack}) async{
+      {Map<String, dynamic>? pathParams, dynamic data, Function? successCallBack, Function? errorCallBack}) async{
     return request(
         path,
         data: data,
@@ -47,7 +47,7 @@ class DioUtil {
   }
 
   Future<void> request(String path,
-      {String method, Map<String, dynamic> pathParams, dynamic data, Function successCallback, Function errorCallback}) async{
+      {required String method, Map<String, dynamic>? pathParams, dynamic data, Function? successCallback, Function? errorCallback}) async{
     return requestLocalService(
         path,
         data: data,
@@ -61,11 +61,11 @@ class DioUtil {
   ///请求本服务器数据
   Future<void> requestLocalService(String path,
       {
-        String method,
-        Map<String, dynamic> pathParams,
+        required String method,
+        Map<String, dynamic>? pathParams,
         dynamic data,
-        Function successCallback,
-        Function errorCallback}) async {
+        Function? successCallback,
+        Function? errorCallback}) async {
     Map<String, dynamic> dataMap = <String, dynamic>{};
     if (data != null) {
       if (data.runtimeType == FormData) {
@@ -86,20 +86,17 @@ class DioUtil {
     }
 
     try {
-      Response<dynamic> response = await _dio.request<dynamic>(
+      Response<dynamic> response = await _dio!.request<dynamic>(
           path,
           data: data,
           queryParameters: pathParams,
           options: Options(method: method)
-      ).catchError((dynamic error){
-        DioError dioError = error as DioError;
-        print(dioError.message);
-      });
+      );
 
       if (response.statusCode == 200) {
-        print(response.data.toString());
+        successCallback?.call(response.data.toString());
       } else {
-        errorCallback(_handleHttpError(response.statusCode));
+        errorCallback?.call(_handleHttpError(response.statusCode));
       }
     } catch (e) {
       print(e);
@@ -107,7 +104,7 @@ class DioUtil {
   }
 
   ///处理Http错误码
-  Map<String,String> _handleHttpError(int errorCode) {
+  Map<String,String> _handleHttpError(int? errorCode) {
     if (errorCode == 404) {
       return {
         'errorCode':errorCode.toString(),

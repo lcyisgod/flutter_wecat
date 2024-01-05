@@ -7,7 +7,6 @@ import 'contacts_phone_page.dart';
 class ContactsFriendPage extends StatefulWidget {
   @override
   State<StatefulWidget> createState() {
-    // TODO: implement createState
     return ContactsFriendPageState();
   }
 }
@@ -30,7 +29,6 @@ class ContactsFriendPageState extends State<ContactsFriendPage> {
 
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,

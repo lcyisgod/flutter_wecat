@@ -10,22 +10,21 @@ class ContactsView extends StatefulWidget {
   * 0:搜索
   * 1:点击标签
   * 2:查看联系人信息*/
-  final Function(int type,Map<String,dynamic> map) onPressed;
+  final Function(int type,Map<String,dynamic>? map)? onPressed;
 
-  const ContactsView({Key key, this.dataList, this.searchDataList,this.onPressed}) : super(key: key);
+  const ContactsView({Key? key, required this.dataList, required this.searchDataList,this.onPressed}) : super(key: key);
   @override
   State<StatefulWidget> createState() {
-    // TODO: implement createState
     return ContactsViewState();
   }
 }
 
 class ContactsViewState extends State<ContactsView> {
-  ScrollController _controller;
-  bool _showTopHeader;
-  List<Map> dataHeaderInfo;
-  String _headerTitle;
-  int _currentSearchIndex;
+  late ScrollController _controller;
+  late bool _showTopHeader;
+  late List<Map> dataHeaderInfo;
+  late String _headerTitle;
+  late int _currentSearchIndex;
 
   //跳转对应的header
   Future<void> _jumpToActionTitle(String title) async {
@@ -105,7 +104,7 @@ class ContactsViewState extends State<ContactsView> {
          if(_headerTitle != headInfoMap['name']) {
            setState(() {
              _currentSearchIndex = i+1;
-             _headerTitle = headInfoMap['name'] as String;
+             _headerTitle = headInfoMap['name']??'';
            });
          }
           break;
@@ -133,7 +132,7 @@ class ContactsViewState extends State<ContactsView> {
                     return InkWell(
                       onTap: (){
                         //搜索
-                        widget.onPressed(0,null);
+                        widget.onPressed?.call(0,null);
                       },
                       child: Container(
                         color: Colours.bg_color,
@@ -167,7 +166,7 @@ class ContactsViewState extends State<ContactsView> {
                       dataMpa: dataMap,
                       onPressed: (int type,dynamic data) {
                         int clickType = type == 0 ? 1:2;
-                        widget.onPressed(clickType,data);
+                        widget.onPressed?.call(clickType,data);
                       },
                     );
                   }
@@ -185,7 +184,7 @@ class ContactsViewState extends State<ContactsView> {
                 ),
                 alignment: Alignment(-1,0),
                 child: Text(
-                    _headerTitle == null?'':_headerTitle
+                    _headerTitle
                 ),
               ),
             )

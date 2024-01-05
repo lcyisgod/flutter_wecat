@@ -6,7 +6,6 @@ import 'package:oktoast/oktoast.dart';
 class MessageDetailView extends StatefulWidget {
   @override
   State<StatefulWidget> createState() {
-    // TODO: implement createState
     return MessageDetailViewState();
   }
 }
@@ -18,9 +17,7 @@ class MessageDetailViewState extends State<MessageDetailView> {
 
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
-
     for(int i = 0; i < 10; i++) {
       Map messageData = {
         "imageUrl" : i % 3 == 0 ? "https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fi1.hdslb.com%2Fbfs%2Farchive%2F9f7069ccbb537742fa8946d4dd3b9624fd9025df.jpg&refer=http%3A%2F%2Fi1.hdslb.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1672973706&t=d20919bee00b32dc72f6a5b4047698bf" : "https://nimg.ws.126.net/?url=http%3A%2F%2Fdingyue.ws.126.net%2F2022%2F0820%2Fa3fabb7aj00rgw36200a6d000hs00k5p.jpg&thumbnail=660x2147483647&quality=80&type=jpg",
@@ -33,7 +30,6 @@ class MessageDetailViewState extends State<MessageDetailView> {
 
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
     return Container(
       color: Colours.bg_color,
       child: Column(

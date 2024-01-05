@@ -4,13 +4,12 @@ import 'package:flutter_wecat/message/widget/message_info_item.dart';
 
 class MessageView extends StatefulWidget {
 
-  final Function(int type,Map<String,dynamic> map) onPressed;
+  final Function(int type,Map<String,dynamic> map)? onPressed;
 
-  const MessageView({Key key,this.onPressed});
+  const MessageView({Key? key,this.onPressed});
 
   @override
   State<StatefulWidget> createState() {
-    // TODO: implement createState
     return MessageViewState();
   }
 }
@@ -18,7 +17,6 @@ class MessageView extends StatefulWidget {
 class MessageViewState extends State<MessageView> {
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
     return Container(
       height: double.infinity,
       width: double.infinity,
@@ -28,7 +26,7 @@ class MessageViewState extends State<MessageView> {
             if(index == 0) {
               return InkWell(
                   onTap: (){
-                    widget.onPressed(0,{});
+                    widget.onPressed?.call(0,{});
                   },
                   child: Container(
                     color: Colours.bg_color,
@@ -60,7 +58,7 @@ class MessageViewState extends State<MessageView> {
             }
             return InkWell(
               onTap: () {
-                widget.onPressed(1,{});
+                widget.onPressed?.call(1,{});
               },
               child: MessageInfoItem(
                 hideMessageAlert: (index % 3 == 0),

@@ -28,9 +28,7 @@ class MessageDetailPageState extends State<MessageDetailPage> {
       ),
       body: SafeArea(
         child: Center(
-          child: MessageDetailView(
-
-          ),
+          child: MessageDetailView(),
         ),
       ),
     );

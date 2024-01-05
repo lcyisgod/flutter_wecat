@@ -8,11 +8,10 @@ class MessageInfoItem extends StatelessWidget{
   ///是否隐藏消息提醒
   final bool hideMessageAlert;
 
-  const MessageInfoItem({Key key,this.hideMessageAlert});
+  const MessageInfoItem({Key? key,required this.hideMessageAlert});
 
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
     return Container(
       height: 45,
       width: double.infinity,

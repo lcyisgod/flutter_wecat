@@ -10,26 +10,24 @@ class ContactsItem extends StatefulWidget {
    * 0:其他标签
    * 1:联系人信息
    */
-  final Function(int type,Map<String,dynamic> map) onPressed;
+  final Function(int type,Map<String,dynamic>? map)? onPressed;
 
-  const ContactsItem({Key key, @required this.dataMpa,this.onPressed}) : super(key: key);
+  const ContactsItem({Key? key,  required this.dataMpa,this.onPressed}) : super(key: key);
 
   @override
   State<StatefulWidget> createState() {
-    // TODO: implement createState
     return ContactsItemState();
   }
 }
 
 class ContactsItemState extends State<ContactsItem> {
 
-  bool haveHeader;
-  List dataList;
-  double heightItem;
+  late bool haveHeader;
+  late List dataList;
+  late double heightItem;
 
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
     if (widget.dataMpa['title'].toString().isEmpty) {
       haveHeader = false;
@@ -53,8 +51,8 @@ class ContactsItemState extends State<ContactsItem> {
           height: 30,
           alignment: Alignment(-1,0),
           padding: EdgeInsets.only(
-            left: 16,
-            right: 16
+              left: 16,
+              right: 16
           ),
           child: Text(
             '${widget.dataMpa['title']}',
@@ -65,7 +63,7 @@ class ContactsItemState extends State<ContactsItem> {
         ContactsPersonModel contactsPersonModel = dataList[index-1] as ContactsPersonModel;
         return InkWell(
           onTap: (){
-            widget.onPressed(1,{'userId':contactsPersonModel.userId});
+            widget.onPressed?.call(1,{'userId':contactsPersonModel.userId});
           },
           child: DisoverUrlItem(
             imageUrl: contactsPersonModel.image??'',
@@ -78,7 +76,7 @@ class ContactsItemState extends State<ContactsItem> {
       ContactsPersonModel contactsPersonModel = dataList[index] as ContactsPersonModel;
       return InkWell(
         onTap: (){
-          widget.onPressed(0,{'title':contactsPersonModel.name});
+          widget.onPressed?.call(0,{'title':contactsPersonModel.name});
         },
         child: DisoverItem(
             imageUrl: contactsPersonModel.image??'',

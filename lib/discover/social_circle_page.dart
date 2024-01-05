@@ -2,23 +2,19 @@ import 'package:flutter/material.dart';
 import 'package:flutter_wecat/discover/models/social_circel_model.dart';
 import 'package:flutter_wecat/discover/view/social_circle_view.dart';
 
-import 'widget/social_circle_item.dart';
-
 class SocialCirclePage extends StatefulWidget {
   @override
   State<StatefulWidget> createState() {
-    // TODO: implement createState
     return SocialCirclePageState();
   }
 }
 
 class SocialCirclePageState extends State<SocialCirclePage> {
 
-  List<SocialCircleModel> dataList;
+  late List<SocialCircleModel> dataList;
 
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
     dataList = [
       SocialCircleModel(

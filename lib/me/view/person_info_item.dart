@@ -2,15 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter_wecat/common/res/resources.dart';
 
 class PersonInfoItem extends StatelessWidget {
-  final String iconStr;
-  final String weCatName;
-  final String weCatNum;
+  final String? iconStr;
+  final String? weCatName;
+  final String? weCatNum;
 
-  const PersonInfoItem({Key key, this.iconStr, this.weCatName, this.weCatNum}) : super(key: key);
+  const PersonInfoItem({Key? key,  this.iconStr, this.weCatName,  this.weCatNum}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
     return Container(
       height: 100,
       color: Colors.white,

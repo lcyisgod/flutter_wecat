@@ -7,17 +7,15 @@ import 'package:flutter_wecat/me/view/person_info_item.dart';
 class MeView extends StatefulWidget {
   @override
   State<StatefulWidget> createState() {
-    // TODO: implement createState
     return MeViewState();
   }
 }
 
 class MeViewState extends State<MeView> {
-  List dataList = [];
+  late List dataList;
 
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
     dataList = [
       {},
@@ -53,7 +51,6 @@ class MeViewState extends State<MeView> {
 
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
     return ListView.builder(
       itemCount: dataList.length+1,
         itemBuilder: (BuildContext context, int index){

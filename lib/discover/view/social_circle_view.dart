@@ -6,23 +6,21 @@ import 'package:flutter_wecat/discover/widget/social_circle_item.dart';
 class SocialCircleView extends StatefulWidget {
   final List<SocialCircleModel> dataList;
 
-  const SocialCircleView({Key key, this.dataList}) : super(key: key);
+  const SocialCircleView({Key? key, required this.dataList}) : super(key: key);
 
   @override
   State<StatefulWidget> createState() {
-    // TODO: implement createState
     return SocialCircleViewState();
   }
 }
 
 class SocialCircleViewState extends State<SocialCircleView> {
-  ScrollController _controller;
-  Color _headerColor;
-  double _opacity;
+  late ScrollController _controller;
+  late  Color _headerColor;
+  late double _opacity;
 
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
     _controller = ScrollController();
     _headerColor = Color(0x00000000);
@@ -47,7 +45,6 @@ class SocialCircleViewState extends State<SocialCircleView> {
 
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
     return Container(
       child: Stack(
         children: [

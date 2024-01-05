@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_wecat/common/res/colors.dart';
 
 class MessageDetailInfoItem extends StatelessWidget {
 
   ///聊天消息
   final Map messageData;
 
-  const MessageDetailInfoItem({Key key, this.messageData}) : super(key: key);
+  const MessageDetailInfoItem({Key? key, required this.messageData}) : super(key: key);
 
 
   Widget createInfoItemWithData(BuildContext context,Map messageData) {
@@ -86,7 +85,6 @@ class MessageDetailInfoItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
     return createInfoItemWithData(context, messageData);
   }
 }

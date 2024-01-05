@@ -5,13 +5,12 @@ import 'package:flutter_wecat/contacts/widget/contacts_phone_info_item.dart';
 
 class ContactsPhoneView extends StatefulWidget {
 
-  final List dataList;
+  final List? dataList;
 
-  const ContactsPhoneView({Key key, this.dataList}) : super(key: key);
+  const ContactsPhoneView({Key? key, this.dataList}) : super(key: key);
 
   @override
   State<StatefulWidget> createState() {
-    // TODO: implement createState
     return ContactsPhoneViewState();
   }
 }
@@ -19,12 +18,11 @@ class ContactsPhoneView extends StatefulWidget {
 class ContactsPhoneViewState extends State<ContactsPhoneView> {
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
     return Container(
       child: ListView.builder(
-          itemCount: widget.dataList.length,
+          itemCount: widget.dataList?.length,
           itemBuilder: (BuildContext context,int index){
-            final Contact contact = widget.dataList[index];
+            final Contact contact = widget.dataList?[index];
             return ContactsPhoneInfoItem(
               contact: contact,
               isFriend: index % 3 == 0,

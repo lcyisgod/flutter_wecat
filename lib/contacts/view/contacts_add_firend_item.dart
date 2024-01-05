@@ -7,10 +7,9 @@ class ContactsAddFriendItem extends StatelessWidget {
   final imageUrl;
   final title;
   final detailTitle;
-  const ContactsAddFriendItem({Key key,this.imageUrl,this.title,this.detailTitle}) : super(key: key);
+  const ContactsAddFriendItem({Key? key,this.imageUrl,this.title,this.detailTitle}) : super(key: key);
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
     return Container(
       height: 45,
       width: double.infinity,

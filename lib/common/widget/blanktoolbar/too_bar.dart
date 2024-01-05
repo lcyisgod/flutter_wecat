@@ -4,7 +4,7 @@ import 'dart:math' as math;
 class ToolBarModel {
   int index;
   FocusNode focusNode;
-  ToolBarModel({this.index,this.focusNode});
+  ToolBarModel({required this.index,required this.focusNode});
 }
 // ignore: must_be_immutable
 class ToolBar extends StatefulWidget {
@@ -14,7 +14,7 @@ class ToolBar extends StatefulWidget {
   Color color = Color(0xffeeeeee);
   Color tintColor = Colors.blue;
 
-  ToolBar({this.focusNodeMap,this.doneCallback,this.height=40,this.color = const Color(0xffeeeeee),this.tintColor = Colors.blue});
+  ToolBar({required this.focusNodeMap,required this.doneCallback,this.height=40,this.color = const Color(0xffeeeeee),this.tintColor = Colors.blue});
 
   @override
   State<StatefulWidget> createState() {
@@ -32,10 +32,10 @@ class ToolBarState extends State<ToolBar>{
   double height=40;
   Color color = Color(0xffeeeeee);
   Color tintColor = Colors.blue;
-  ToolBarState({this.focusNodeMap,this.doneCallback,this.height=40,this.color = const Color(0xffeeeeee),this.tintColor = Colors.blue});
+  ToolBarState({required this.focusNodeMap,required this.doneCallback,this.height=40,this.color = const Color(0xffeeeeee),this.tintColor = Colors.blue});
   @override
   Widget build(BuildContext context) {
-    ToolBarModel barModel = currentEditingFocusNode();
+    ToolBarModel? barModel = currentEditingFocusNode();
     if(barModel == null){
       // 没有任何输入框处于编辑状态，则返回的是0高度的容器
       return Column(children: <Widget>[
@@ -104,7 +104,7 @@ class ToolBarState extends State<ToolBar>{
     );
   }
   // 获取当前获得焦点的对象
-  ToolBarModel currentEditingFocusNode(){
+  ToolBarModel? currentEditingFocusNode(){
     for(ToolBarModel barModel in focusNodeMap.values){
       if(barModel.focusNode.hasFocus){
         return barModel;

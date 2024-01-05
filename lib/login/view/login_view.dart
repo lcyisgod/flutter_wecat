@@ -3,23 +3,22 @@ import 'package:flutter_wecat/common/res/resources.dart';
 import 'package:flutter_wecat/common/widget/distance_widget.dart';
 
 class LoginView extends StatefulWidget {
-  final Function(int type,Map<String,dynamic> map) onPressed;
-  const LoginView({Key key, this.onPressed}) : super(key: key);
+  final Function(int type,Map<String,dynamic>? map)? onPressed;
+  const LoginView({Key? key, this.onPressed}) : super(key: key);
 
   @override
   State<StatefulWidget> createState() {
-    // TODO: implement createState
     return LoginViewState();
   }
 }
 
 class LoginViewState extends State<LoginView> {
-  List<TextEditingController> controllerList;
-  bool canLogin;
+
+  late bool canLogin;
+  late List<TextEditingController> controllerList;
 
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
     canLogin = false;
     controllerList = <TextEditingController>[
@@ -55,7 +54,7 @@ class LoginViewState extends State<LoginView> {
             ),
             InkWell(
               onTap: (){
-                widget.onPressed(0,null);
+                widget.onPressed?.call(0,null);
               },
               child: Container(
                 height: 40,
@@ -145,7 +144,7 @@ class LoginViewState extends State<LoginView> {
             ),
             InkWell(
               onTap: (){
-                widget.onPressed(1,null);
+                widget.onPressed?.call(1,null);
               },
               child: Container(
                 height: 40,
@@ -163,7 +162,7 @@ class LoginViewState extends State<LoginView> {
             InkWell(
               onTap: (){
                 if(canLogin) {
-                  widget.onPressed(2,{'phone':controllerList[1].text});
+                  widget.onPressed?.call(2,{'phone':controllerList[1].text});
                 }
               },
               child: Container(
@@ -190,7 +189,7 @@ class LoginViewState extends State<LoginView> {
                 children: [
                   InkWell(
                     onTap: (){
-                      widget.onPressed(3,null);
+                      widget.onPressed?.call(3,null);
                     },
                     child: Text(
                       '找回密码 ',
@@ -203,7 +202,7 @@ class LoginViewState extends State<LoginView> {
                   ),
                   InkWell(
                     onTap: (){
-                     widget.onPressed(4,null);
+                     widget.onPressed?.call(4,null);
                     },
                     child: Text(
                       ' 更多选项',

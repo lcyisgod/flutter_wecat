@@ -8,17 +8,16 @@ class BlankToolBarModel {
   // 保存页面中所有InputText绑定的FocusNode
   Map<String, ToolBarModel> focusNodeMap = {};
 
-  FocusNode _currentEditingNode;
+  FocusNode? _currentEditingNode;
   // 用于外侧的回调
-  VoidCallback outSideCallback;
-  BlankToolBarModel({this.outSideCallback});
+  VoidCallback? outSideCallback;
 
   /// 通过一个key获取node，一般是通过TextEditingController对象的hashCode
   /// TextEditingController nickNameController = TextEditingController();
   /// String key = nickNameController.hashCode.toString();
   /// FocusNode focusNode = blankToolBarModel.getFocusNode(key);
   FocusNode getFocusNode(String key) {
-    ToolBarModel barModel = focusNodeMap[key];
+    ToolBarModel? barModel = focusNodeMap[key];
     if (barModel == null) {
       barModel =
           ToolBarModel(index: focusNodeMap.length, focusNode: FocusNode());
@@ -35,7 +34,7 @@ class BlankToolBarModel {
   }
 
   /// 找到正处于编辑状态的FocusNode
-  FocusNode findEditingNode() {
+  FocusNode? findEditingNode() {
     for (ToolBarModel barModel in focusNodeMap.values) {
       if (barModel.focusNode.hasFocus) {
         return barModel.focusNode;
@@ -46,15 +45,14 @@ class BlankToolBarModel {
 
   // 监听FocusNode变化
   Future<Null> focusNodeListener() async {
-    FocusNode editingNode = findEditingNode();
-    if (_currentEditingNode != editingNode) {
-      _currentEditingNode = editingNode;
-      print('>>>>>>>>+++++++++++');
-      if (outSideCallback != null) {
-        outSideCallback();
+    FocusNode? editingNode = findEditingNode();
+    if (editingNode != null) {
+      if (_currentEditingNode != editingNode) {
+        _currentEditingNode = editingNode;
+        if (outSideCallback != null) {
+          outSideCallback!();
+        }
       }
-    } else {
-      print('>>>>>>>>----------');
     }
   }
 
@@ -77,18 +75,18 @@ class BlankToolBarTool {
       // 上下文
       BuildContext context,
       {
-      // 数据model
-      BlankToolBarModel model,
-      // 要展示的子内容
-      Widget body,
-      // 是否展示toolBar
-      bool showToolBar = true,
-      // 默认的toolBar的高度
-      double toolBarHeight = 40,
-      // toolBar的背景色
-      Color toolBarColor = const Color(0xffeeeeee),
-      // toolBar的可点击按钮的颜色
-      Color toolBarTintColor = Colors.blue}) {
+        // 数据model
+        required BlankToolBarModel model,
+        // 要展示的子内容
+        required Widget body,
+        // 是否展示toolBar
+        bool showToolBar = true,
+        // 默认的toolBar的高度
+        double toolBarHeight = 40,
+        // toolBar的背景色
+        Color toolBarColor = const Color(0xffeeeeee),
+        // toolBar的可点击按钮的颜色
+        Color toolBarTintColor = Colors.blue}) {
     if (!showToolBar) {
       return GestureDetector(
         onTap: () {

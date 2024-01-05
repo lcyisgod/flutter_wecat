@@ -6,7 +6,6 @@ import 'package:flutter_wecat/discover/view/discover_view.dart';
 class DiscoverPage extends StatefulWidget {
   @override
   State<StatefulWidget> createState() {
-    // TODO: implement createState
     return DiscoverPageState();
   }
 }
@@ -28,7 +27,6 @@ class DiscoverPageState extends State<DiscoverPage> {
 
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,

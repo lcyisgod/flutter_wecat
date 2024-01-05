@@ -9,19 +9,17 @@ import 'common/res/resources.dart';
 class MainPage extends StatefulWidget {
   @override
   State<StatefulWidget> createState() {
-    // TODO: implement createState
     return MainPageState();
   }
 }
 
 class MainPageState extends State<MainPage> {
 
-  PageController _pageController;
-  int _currentIndex;
+  late PageController _pageController;
+  late int _currentIndex;
 
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
     _pageController = PageController();
     _currentIndex = 0;
@@ -29,8 +27,7 @@ class MainPageState extends State<MainPage> {
 
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
-    return WillPopScope(
+    return PopScope(
         child: Scaffold(
           bottomNavigationBar: BottomNavigationBar(
             backgroundColor: Colors.white,
@@ -98,7 +95,6 @@ class MainPageState extends State<MainPage> {
             },
             physics: NeverScrollableScrollPhysics(),
           ),
-        ),
-        onWillPop: null);
+        ));
   }
 }

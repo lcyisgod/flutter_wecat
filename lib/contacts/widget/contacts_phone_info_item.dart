@@ -9,11 +9,10 @@ class ContactsPhoneInfoItem extends StatelessWidget{
 
   final bool isFriend;
 
-  const ContactsPhoneInfoItem({Key key,this.contact,this.isFriend}) : super(key: key);
+  const ContactsPhoneInfoItem({Key? key,required this.contact,required this.isFriend}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
     return Container(
       height: 45,
       padding: EdgeInsets.only(left: 5.0,right: 5.0),
@@ -55,7 +54,6 @@ class ContactsPhoneInfoItem extends StatelessWidget{
                       if (isFriend) {
                         return;
                       }
-
                     },
                     child: Container(
                       width: 30,

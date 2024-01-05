@@ -9,7 +9,6 @@ import 'contacts_detail_page.dart';
 class ContactsPage extends StatefulWidget {
   @override
   State<StatefulWidget> createState() {
-    // TODO: implement createState
     return ContactsPageState();
   }
 }
@@ -20,7 +19,6 @@ class ContactsPageState extends State<ContactsPage> {
 
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
     searchDataList = ['🔍','B','C','Y','Z'];
     dataList = [
@@ -132,11 +130,11 @@ class ContactsPageState extends State<ContactsPage> {
   * 1:点击标签
   * 2:查看联系人信息*/
   Future _clickActionEvent(int type,dynamic data) async{
-    Map dataMap =  data as Map;
+    Map? dataMap =  data;
     if (type == 0) {
 
     }else if (type == 1) {
-      final String title = dataMap['title'];
+      final String title = dataMap!['title'];
       if (title == '新的朋友') {
         Navigator.push(
             context,
@@ -181,6 +179,7 @@ class ContactsPageState extends State<ContactsPage> {
             dataList: dataList,
             searchDataList: searchDataList,
             onPressed: (int type,dynamic data) {
+              print('-----$data');
               _clickActionEvent(type, data);
             },
           )

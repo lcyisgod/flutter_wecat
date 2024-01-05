@@ -6,22 +6,20 @@ import '../../common/res/styles.dart';
 
 class ContactsAddFriendView extends StatefulWidget {
 
-  final Function(int type,Map<String,dynamic> map) onPressed;
+  final Function(int type,Map<String,dynamic>? map)? onPressed;
 
-  const ContactsAddFriendView({Key key, this.onPressed}) : super(key: key);
+  const ContactsAddFriendView({Key? key, this.onPressed}) : super(key: key);
 
   @override
   State<StatefulWidget> createState() {
-    // TODO: implement createState
     return ContactsAddFriendViewState();
   }
 }
 
 class ContactsAddFriendViewState extends State<ContactsAddFriendView> {
-  List<Map> dataItem;
+  late List<Map> dataItem;
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
     dataItem = [
       {
@@ -137,7 +135,7 @@ class ContactsAddFriendViewState extends State<ContactsAddFriendView> {
                 detailTitle: dataMap["detailTitle"],
               ),
               onTap: () {
-                widget.onPressed(index-1,null);
+                widget.onPressed?.call(index-1,null);
               },
             );
           }),

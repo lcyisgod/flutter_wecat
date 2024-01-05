@@ -8,8 +8,8 @@ class ContactsFriendView extends StatefulWidget {
   /*
   * 1:添加手机联系人
   * 2:查看联系人添加信息*/
-  final Function(int type,Map<String,dynamic> map) onPressed;
-  const ContactsFriendView({Key key, this.dataList,this.onPressed}) : super(key: key);
+  final Function(int type,Map<String,dynamic>? map)? onPressed;
+  const ContactsFriendView({Key? key, required this.dataList,this.onPressed}) : super(key: key);
 
   @override
   State<StatefulWidget> createState() {
@@ -46,7 +46,7 @@ class ContactsFriendViewState extends State<ContactsFriendView> {
           }else if (index == widget.dataList.length+1) {
             return InkWell(
               onTap: (){
-                widget.onPressed(1,null);
+                widget.onPressed?.call(1,null);
               },
               child: DisoverItem(
                 title: '添加手机联系人',

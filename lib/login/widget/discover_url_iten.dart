@@ -7,11 +7,10 @@ class DisoverUrlItem extends StatelessWidget {
   final String title;
   final bool hideArrow;
 
-  const DisoverUrlItem({Key key, this.imageUrl,this.title,this.hideArrow}) : super(key: key);
+  const DisoverUrlItem({Key? key, required this.imageUrl,required this.title,required this.hideArrow}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
     return Container(
       height: 55,
       color: Colors.white,
